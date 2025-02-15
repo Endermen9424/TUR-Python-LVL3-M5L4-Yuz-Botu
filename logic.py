@@ -2,32 +2,32 @@ import cv2
 
 
 def process_image(image_path, output_path):
-    # Loading a pre-trained classifier for detecting faces
+    # Yüzleri tespit etmek için önceden eğitilmiş bir sınıflandırıcı yükleme
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-    # Loading the image
+    # Görüntüyü yükleme
     image = 
 
-    # Converting the image to grayscale for improving detector performance
+    # Dedektör performansını artırmak için görüntüyü gri tonlamaya dönüştürme
     gray = 
 
-    # Detecting faces in the image
+    # Görüntüdeki yüzleri tespit etme
     faces = 
 
-    # Blurring the area around each detected face
+    # Tespit edilen her yüzün etrafındaki alanı bulanıklaştırma
     for (x, y, w, h) in faces:
-        # Extracting the face region
+        # Yüz bölgesini çıkarma
         face_region = image[y:y+h, x:x+w]
 
-        # Applying blur
+        # Bulanıklaştırma uygulama
         blurred_face = 
 
-        # Replacing the face area with the blurred image
+        # Yüz alanını bulanık görüntüyle değiştirme
         image[y+y+h, x:x+w] = blurred_face
 
-    # Saving the processed image
+    # İşlenmiş görüntüyü kaydetme
     
 
 
-# Testing the code's functionality
+# Kodun işlevselliğini kontrol etme
 process_image("face.png", "output.png")
