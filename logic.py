@@ -20,7 +20,8 @@ def process_image(image_path, output_path):
         face_region = image[y:y+h, x:x+w]
 
         # Bulanıklaştırma uygulama (kernel boyutu yüz boyutundan büyük olmamalı ve tek sayı olmalı)
-        blurred_face = cv2.blur(face_region, (99, 99))
+        #blurred_face = cv2.blur(face_region, (99, 99))
+        blurred_face = cv2.GaussianBlur(face_region, (99, 99), 30)
 
         # Yüz alanını bulanık görüntüyle değiştirme (düzeltildi: y:y+h)
         image[y:y+h, x:x+w] = blurred_face
